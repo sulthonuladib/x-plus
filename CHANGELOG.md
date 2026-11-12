@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Translation provider settings say where the post text is sent, and turn red with the host name when a custom OpenAI-compatible / LibreTranslate endpoint replaces the provider's own
 - Filtering: hide posts with custom rules — conditions on the author name, @handle, text, language, media, attachments and flags, combined with AND/OR inside a rule and OR between rules, with a live “Test on this page” preview
 
+### Changed
+
+- The script now installs and updates from the `sulthonuladib` fork: `@namespace`, `@author`, `@homepageURL`, `@supportURL`, `@updateURL` / `@downloadURL` and the About links all point to it. A manager treats the changed namespace as a **new** script, so remove the old entry once after switching
+
 ### Security
 
 - Documented what the userscript metadata's `@connect *` actually covers (custom provider endpoints) in the README “Privacy” section and in `docs/ARCHITECTURE.md`
@@ -149,7 +153,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - The Translate button of an X Article now lands in the header of the article's own post, before the Grok summary button: posts embedded inside the article (each with its own Grok / ⋮) are ignored, and the Grok button is found by its position even when it is labelled in another UI language (e.g. "Составить сводку")
 
-[0.2.1]: https://github.com/NemoKing1210/x-plus/releases/tag/v0.2.1
+[0.2.1]: https://github.com/sulthonuladib/x-plus/releases/tag/v0.2.1
 
 ## [0.2.0] - 2026-10-17
 
@@ -158,7 +162,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **X Articles translation**: a Translate button in the header of the article page next to Grok (a bar above the body when no header is found), or automatic translation on open; title, paragraphs, headings, list items and captions are translated block by block with the configured provider, keeping links, line breaks and bold / italic lines; shown under each block or in place (button / hover peek / split); embedded posts are left untouched; respects the account blocklist, language filters and the cache; works with both the signed-out (Tailwind) and signed-in (draft-js) article markup; new **Translate articles** switch
 - Blocks are retried with a growing pause and translated two at a time, so public endpoints that throttle bursts do not break long articles
 
-[0.2.0]: https://github.com/NemoKing1210/x-plus/releases/tag/v0.2.0
+[0.2.0]: https://github.com/sulthonuladib/x-plus/releases/tag/v0.2.0
 
 ## [0.1.0] - 2026-10-17
 
@@ -176,18 +180,18 @@ First release.
 - UI in 8 languages: English, Russian, Chinese, Spanish, Portuguese, German, French, Japanese
 - `npm run check:i18n` (all locales must contain every used key) and a local harness (`npm run harness`) for manual testing
 
-[Unreleased]: https://github.com/NemoKing1210/x-plus/compare/v0.13.0...HEAD
-[0.13.0]: https://github.com/NemoKing1210/x-plus/compare/v0.12.1...v0.13.0
-[0.12.1]: https://github.com/NemoKing1210/x-plus/compare/v0.12.0...v0.12.1
-[0.12.0]: https://github.com/NemoKing1210/x-plus/compare/v0.11.0...v0.12.0
-[0.11.0]: https://github.com/NemoKing1210/x-plus/compare/v0.10.0...v0.11.0
-[0.10.0]: https://github.com/NemoKing1210/x-plus/compare/v0.9.0...v0.10.0
-[0.9.0]: https://github.com/NemoKing1210/x-plus/compare/v0.8.0...v0.9.0
-[0.8.0]: https://github.com/NemoKing1210/x-plus/compare/v0.7.0...v0.8.0
-[0.7.0]: https://github.com/NemoKing1210/x-plus/compare/v0.6.1...v0.7.0
-[0.6.1]: https://github.com/NemoKing1210/x-plus/compare/v0.6.0...v0.6.1
-[0.6.0]: https://github.com/NemoKing1210/x-plus/compare/v0.5.0...v0.6.0
-[0.5.0]: https://github.com/NemoKing1210/x-plus/compare/v0.4.0...v0.5.0
-[0.4.0]: https://github.com/NemoKing1210/x-plus/compare/v0.3.0...v0.4.0
-[0.3.0]: https://github.com/NemoKing1210/x-plus/compare/v0.2.1...v0.3.0
-[0.1.0]: https://github.com/NemoKing1210/x-plus/releases/tag/v0.1.0
+[Unreleased]: https://github.com/sulthonuladib/x-plus/compare/v0.13.0...HEAD
+[0.13.0]: https://github.com/sulthonuladib/x-plus/compare/v0.12.1...v0.13.0
+[0.12.1]: https://github.com/sulthonuladib/x-plus/compare/v0.12.0...v0.12.1
+[0.12.0]: https://github.com/sulthonuladib/x-plus/compare/v0.11.0...v0.12.0
+[0.11.0]: https://github.com/sulthonuladib/x-plus/compare/v0.10.0...v0.11.0
+[0.10.0]: https://github.com/sulthonuladib/x-plus/compare/v0.9.0...v0.10.0
+[0.9.0]: https://github.com/sulthonuladib/x-plus/compare/v0.8.0...v0.9.0
+[0.8.0]: https://github.com/sulthonuladib/x-plus/compare/v0.7.0...v0.8.0
+[0.7.0]: https://github.com/sulthonuladib/x-plus/compare/v0.6.1...v0.7.0
+[0.6.1]: https://github.com/sulthonuladib/x-plus/compare/v0.6.0...v0.6.1
+[0.6.0]: https://github.com/sulthonuladib/x-plus/compare/v0.5.0...v0.6.0
+[0.5.0]: https://github.com/sulthonuladib/x-plus/compare/v0.4.0...v0.5.0
+[0.4.0]: https://github.com/sulthonuladib/x-plus/compare/v0.3.0...v0.4.0
+[0.3.0]: https://github.com/sulthonuladib/x-plus/compare/v0.2.1...v0.3.0
+[0.1.0]: https://github.com/sulthonuladib/x-plus/releases/tag/v0.1.0

@@ -6,13 +6,13 @@ import pkg from '../../package.json' with { type: 'json' };
 
 export const SCRIPT_NAME = 'X Plus';
 export const SCRIPT_VERSION = pkg.version;
-export const REPO_URL = 'https://github.com/NemoKing1210/x-plus';
-export const AUTHOR_NAME = 'NemoKing';
-export const AUTHOR_HANDLE = 'NemoKing1210';
-export const AUTHOR_EMAIL = 'nemoking1210@gmail.com';
-export const AUTHOR_URL = 'https://github.com/NemoKing1210';
-export const AUTHOR_AVATAR_URL =
-  'https://avatars.githubusercontent.com/u/58397369?v=4';
+export const REPO_URL = 'https://github.com/sulthonuladib/x-plus';
+export const AUTHOR_NAME = 'sulthonuladib';
+export const AUTHOR_HANDLE = 'sulthonuladib';
+/** No public address: the About tab links to the profile instead. */
+export const AUTHOR_EMAIL = '';
+export const AUTHOR_URL = 'https://github.com/sulthonuladib';
+export const AUTHOR_AVATAR_URL = 'https://github.com/sulthonuladib.png';
 
 /* ------------------------------------------------------------------ */
 /* Storage                                                             */

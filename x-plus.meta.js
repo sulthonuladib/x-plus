@@ -7,9 +7,9 @@
 // @name:de            X Plus
 // @name:fr            X Plus
 // @name:ja            X Plus
-// @namespace          https://github.com/NemoKing1210/x-plus
+// @namespace          https://github.com/sulthonuladib/x-plus
 // @version            0.13.0
-// @author             NemoKing1210
+// @author             sulthonuladib
 // @description        Translation, video download and many improvements for X (x.com)
 // @description:ru     Перевод, скачивание видео и множество улучшений для X (x.com)
 // @description:zh-CN  为 X (x.com) 提供翻译、视频下载和众多增强功能
@@ -20,12 +20,12 @@
 // @description:ja     X (x.com) に翻訳・動画ダウンロードなど多数の改善を追加
 // @license            MIT
 // @icon               https://abs.twimg.com/favicons/twitter.3.ico
-// @homepage           https://github.com/NemoKing1210/x-plus
-// @homepageURL        https://github.com/NemoKing1210/x-plus
-// @source             https://github.com/NemoKing1210/x-plus.git
-// @supportURL         https://github.com/NemoKing1210/x-plus/issues
-// @downloadURL        https://raw.githubusercontent.com/NemoKing1210/x-plus/main/x-plus.user.js
-// @updateURL          https://raw.githubusercontent.com/NemoKing1210/x-plus/main/x-plus.user.js
+// @homepage           https://github.com/sulthonuladib/x-plus
+// @homepageURL        https://github.com/sulthonuladib/x-plus
+// @source             https://github.com/sulthonuladib/x-plus.git
+// @supportURL         https://github.com/sulthonuladib/x-plus/issues
+// @downloadURL        https://raw.githubusercontent.com/sulthonuladib/x-plus/main/x-plus.user.js
+// @updateURL          https://raw.githubusercontent.com/sulthonuladib/x-plus/main/x-plus.user.js
 // @match              https://x.com/*
 // @match              https://www.x.com/*
 // @match              https://twitter.com/*

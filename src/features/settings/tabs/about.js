@@ -50,11 +50,13 @@ function render() {
   avatar.height = 56;
   avatar.decoding = 'async';
   const meta = el('div', 'xp-about__meta');
-  meta.append(
-    link('xp-about__name', AUTHOR_URL, AUTHOR_NAME),
-    el('span', 'xp-about__handle', `@${AUTHOR_HANDLE}`),
-    link('xp-about__email', `mailto:${AUTHOR_EMAIL}`, AUTHOR_EMAIL),
-  );
+  meta.append(link('xp-about__name', AUTHOR_URL, AUTHOR_NAME));
+  if (AUTHOR_HANDLE && AUTHOR_HANDLE !== AUTHOR_NAME) {
+    meta.appendChild(el('span', 'xp-about__handle', `@${AUTHOR_HANDLE}`));
+  }
+  if (AUTHOR_EMAIL) {
+    meta.appendChild(link('xp-about__email', `mailto:${AUTHOR_EMAIL}`, AUTHOR_EMAIL));
+  }
   author.append(avatar, meta);
   root.appendChild(author);
 

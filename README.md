@@ -1,7 +1,7 @@
 # X Plus
 
-[![CI](https://github.com/NemoKing1210/x-plus/actions/workflows/ci.yml/badge.svg)](https://github.com/NemoKing1210/x-plus/actions/workflows/ci.yml)
-[![Install userscript](https://img.shields.io/badge/Install-userscript-0f1419?style=for-the-badge&labelColor=1d9bf0)](https://raw.githubusercontent.com/NemoKing1210/x-plus/main/x-plus.user.js)
+[![CI](https://github.com/sulthonuladib/x-plus/actions/workflows/ci.yml/badge.svg)](https://github.com/sulthonuladib/x-plus/actions/workflows/ci.yml)
+[![Install userscript](https://img.shields.io/badge/Install-userscript-0f1419?style=for-the-badge&labelColor=1d9bf0)](https://raw.githubusercontent.com/sulthonuladib/x-plus/main/x-plus.user.js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 [![Version](https://img.shields.io/badge/version-0.6.1-green?style=for-the-badge)](CHANGELOG.md)
 
@@ -11,6 +11,10 @@ configurable from one settings panel that follows X's light / dim / lights-out
 theme.
 
 > Not affiliated with X Corp. / Twitter.
+>
+> Fork of [NemoKing1210/x-plus](https://github.com/NemoKing1210/x-plus), maintained by
+> [sulthonuladib](https://github.com/sulthonuladib). The extension installs and updates
+> from this fork's `main`.
 
 ## Install
 
@@ -20,7 +24,7 @@ theme.
 2. Install from the raw URL (the script updates itself from `main`):
 
 ```
-https://raw.githubusercontent.com/NemoKing1210/x-plus/main/x-plus.user.js
+https://raw.githubusercontent.com/sulthonuladib/x-plus/main/x-plus.user.js
 ```
 
 | Manager | Path |
@@ -33,6 +37,8 @@ https://raw.githubusercontent.com/NemoKing1210/x-plus/main/x-plus.user.js
 Open the settings from the **X Plus** entry in X's left menu or from the
 userscript manager's menu command.
 
+> Coming from the original repository? Remove that userscript first — this fork
+> uses its own `@namespace`, so a manager lists it as a second, separate script.
 
 ## Features
 

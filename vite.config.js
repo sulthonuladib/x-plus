@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import monkey from 'vite-plugin-monkey';
 import pkg from './package.json' with { type: 'json' };
 
-const RAW_BASE = 'https://raw.githubusercontent.com/NemoKing1210/x-plus/main';
+const RAW_BASE = 'https://raw.githubusercontent.com/sulthonuladib/x-plus/main';
 
 export default defineConfig({
   build: {
@@ -35,7 +35,7 @@ export default defineConfig({
           fr: 'X Plus',
           ja: 'X Plus',
         },
-        namespace: 'https://github.com/NemoKing1210/x-plus',
+        namespace: 'https://github.com/sulthonuladib/x-plus',
         version: pkg.version,
         description: {
           '': 'Translation, video download and many improvements for X (x.com)',
@@ -47,10 +47,10 @@ export default defineConfig({
           fr: 'Traduction, téléchargement de vidéos et nombreuses améliorations pour X (x.com)',
           ja: 'X (x.com) に翻訳・動画ダウンロードなど多数の改善を追加',
         },
-        author: 'NemoKing1210',
+        author: 'sulthonuladib',
         tag: ['x', 'twitter', 'translate', 'video', 'download'],
-        homepageURL: 'https://github.com/NemoKing1210/x-plus',
-        supportURL: 'https://github.com/NemoKing1210/x-plus/issues',
+        homepageURL: 'https://github.com/sulthonuladib/x-plus',
+        supportURL: 'https://github.com/sulthonuladib/x-plus/issues',
         updateURL: `${RAW_BASE}/x-plus.user.js`,
         downloadURL: `${RAW_BASE}/x-plus.user.js`,
         license: 'MIT',

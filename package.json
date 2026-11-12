@@ -4,15 +4,15 @@
   "private": true,
   "type": "module",
   "description": "Userscript that adds translation, video download and many quality-of-life improvements to X (x.com)",
-  "author": "NemoKing1210",
+  "author": "sulthonuladib",
   "license": "MIT",
-  "homepage": "https://github.com/NemoKing1210/x-plus",
+  "homepage": "https://github.com/sulthonuladib/x-plus",
   "bugs": {
-    "url": "https://github.com/NemoKing1210/x-plus/issues"
+    "url": "https://github.com/sulthonuladib/x-plus/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NemoKing1210/x-plus.git"
+    "url": "https://github.com/sulthonuladib/x-plus.git"
   },
   "engines": {
     "node": ">=20"
