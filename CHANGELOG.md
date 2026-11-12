@@ -9,7 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- About → “Data & network”: one screen listing what leaves the browser (translated post text and where it goes, media hosts, update channel) and what stays on the device
+- Translation provider settings say where the post text is sent, and turn red with the host name when a custom OpenAI-compatible / LibreTranslate endpoint replaces the provider's own
 - Filtering: hide posts with custom rules — conditions on the author name, @handle, text, language, media, attachments and flags, combined with AND/OR inside a rule and OR between rules, with a live “Test on this page” preview
+
+### Security
+
+- Documented what the userscript metadata's `@connect *` actually covers (custom provider endpoints) in the README “Privacy” section and in `docs/ARCHITECTURE.md`
 
 ## [0.13.0] - 2026-11-12
 

@@ -33,6 +33,7 @@ https://raw.githubusercontent.com/NemoKing1210/x-plus/main/x-plus.user.js
 Open the settings from the **X Plus** entry in X's left menu or from the
 userscript manager's menu command.
 
+
 ## Features
 
 ### Translation
@@ -149,6 +150,28 @@ Interface clean-up.
 - Translation requests go to the provider you pick (Google by default) from
   your browser. API keys stay in your userscript storage — they are included in
   the JSON export, keep that file private.
+
+## Privacy
+
+What leaves the browser, and where it goes:
+
+- **Post text** — only to the translation provider you pick, and only when a
+  translation runs (button, automatic mode, or Shorts pre-fetch). Translation
+  off means no post text is sent anywhere.
+- **Custom endpoints** — if you point OpenAI-compatible or LibreTranslate at your
+  own server, the text goes there; the settings show a warning when the endpoint
+  is not the provider's default.
+- **Media** — downloaded from X's own hosts (`video.twimg.com`, `pbs.twimg.com`,
+  `cdn.syndication.twimg.com`) and, for restricted posts, X's GraphQL on the page's
+  own origin with your session.
+- **Updates** — fetched from `raw.githubusercontent.com/<repo>/main` by your
+  userscript manager, nothing else.
+- **Stays local** — settings, API keys and the translation cache live in
+  userscript storage; there is no telemetry and no analytics call.
+
+The metadata declares `@connect *` so custom provider endpoints keep working;
+that is wider than the fixed host list, and the script itself only contacts the
+hosts above.
 
 ## Development
 

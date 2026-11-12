@@ -185,6 +185,12 @@ scan → findPostTextRoots() → enhancePost(el)
 the settings schema and UI follow), implement `translateWith<Name>`, wire it
 in `api.js`, add its host to `@connect` in `vite.config.js`.
 
+`@connect` ends with `*` because a provider's endpoint is user-configurable
+(OpenAI-compatible `baseUrl`, LibreTranslate `apiUrl`): a fixed host list would
+break self-hosted endpoints. Narrow it only together with removing those fields,
+and keep the README “Privacy” section in step — it is the honest description of
+what the wildcard actually covers.
+
 ### media
 
 `viewer.js` is independent of downloads: delegated capture-phase listeners (wheel, pointer, dblclick, keys) apply a CSS transform to the `<img>` of X's full-screen photo view (`SEL` in the file header) and swap in `name=orig` while zoomed.

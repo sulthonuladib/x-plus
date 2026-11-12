@@ -18,6 +18,25 @@ function link(className, href, text) {
   return a;
 }
 
+/** Honest answer to “what does this script send, and where?”. */
+const NETWORK_KEYS = [
+  'about.networkTranslate',
+  'about.networkCustom',
+  'about.networkMedia',
+  'about.networkLocal',
+  'about.networkUpdate',
+  'about.networkConnect',
+];
+
+function networkBlock() {
+  const wrap = el('section', 'xp-about__network');
+  wrap.appendChild(el('h3', 'xp-about__networkTitle', t('about.networkTitle')));
+  const list = el('ul', 'xp-about__networkList');
+  for (const key of NETWORK_KEYS) list.appendChild(el('li', 'xp-about__networkItem', t(key)));
+  wrap.appendChild(list);
+  return wrap;
+}
+
 function render() {
   const root = el('div', 'xp-about');
   root.appendChild(el('p', 'xp-about__desc', t('about.description')));
@@ -38,6 +57,8 @@ function render() {
   );
   author.append(avatar, meta);
   root.appendChild(author);
+
+  root.appendChild(networkBlock());
 
   root.appendChild(el('p', 'xp-about__foot', `${t('about.license')} · v${SCRIPT_VERSION}`));
   return root;

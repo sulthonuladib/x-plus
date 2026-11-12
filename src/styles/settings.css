@@ -657,6 +657,11 @@
   background: transparent;
 }
 
+/* “Where does the post text go” note under a provider's fields. */
+.xp-provider-egress[data-custom='1'] {
+  color: var(--xp-danger);
+}
+
 /* Cache meter */
 .xp-meter {
   display: flex;
@@ -833,6 +838,36 @@
 
 .xp-about__email:hover {
   text-decoration: underline;
+}
+
+/* “Data & network” block: what leaves the browser, in plain sentences. */
+.xp-about__network {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 0 0;
+  border-top: 1px solid var(--xp-border);
+}
+
+.xp-about__networkTitle {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--xp-fg);
+}
+
+.xp-about__networkList {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.xp-about__networkItem {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--xp-fg-muted);
 }
 
 /* ───────────────────────── X Plus additions ───────────────────────── */

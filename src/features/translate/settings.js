@@ -23,6 +23,17 @@ import { TRANSLATION_PROVIDERS } from './providers/registry.js';
 
 const tr = (key, vars) => t(`translate.${key}`, vars);
 
+/** Trailing slashes and case do not make an endpoint "custom". */
+const endpointOf = (value) => String(value || '').trim().replace(/\/+$/, '');
+
+function hostOf(url) {
+  try {
+    return new URL(String(url)).host;
+  } catch {
+    return String(url || '');
+  }
+}
+
 const targetLangOptions = () => [
   { value: 'auto', label: `${LOCALE_FLAG_AUTO} ${tr('langAuto')}` },
   ...TARGET_LANGUAGES.map((lang) => ({
@@ -71,6 +82,8 @@ function renderProviderFields(ctx) {
   for (const provider of TRANSLATION_PROVIDERS) {
     const block = el('div', 'xp-provider-fields');
     const config = ctx.section.providerConfig[provider.id];
+    // A provider whose endpoint is editable (openai baseUrl, libretranslate apiUrl).
+    const endpointField = provider.fields.find((spec) => spec.type === 'url' && spec.default);
 
     for (const spec of provider.fields) {
       const common = {
@@ -79,6 +92,7 @@ function renderProviderFields(ctx) {
         value: config[spec.key],
         onChange: (value) => {
           config[spec.key] = value;
+          syncEgress();
           ctx.changed();
         },
       };
@@ -96,6 +110,21 @@ function renderProviderFields(ctx) {
       block.appendChild(control.row);
     }
     block.appendChild(el('p', 'xp-hint', t(provider.hintKey)));
+
+    // What leaves the browser: the provider, or the endpoint the person typed in.
+    const egress = el('p', 'xp-hint xp-provider-egress');
+    block.appendChild(egress);
+    const syncEgress = () => {
+      const custom =
+        endpointField && endpointOf(config[endpointField.key]) !== endpointOf(endpointField.default);
+      egress.dataset.custom = custom ? '1' : '0';
+      egress.textContent = custom
+        ? fmt(tr('providerEgressCustom'), { host: hostOf(config[endpointField.key]) })
+        : fmt(tr('providerEgress'), { provider: provider.name });
+    };
+    ctx.subscribe(syncEgress);
+    syncEgress();
+
     blocks.set(provider.id, block);
     root.appendChild(block);
   }
